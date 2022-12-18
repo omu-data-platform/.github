@@ -2,24 +2,34 @@
 個人データやセンシングデータを利活用するためのプラットフォーム。
 
 ## デモ: マシン1台で試してみる
+### 要件
+以下のコマンドをインストールしていること。
+- `curl`
+- `git`
 
-準備
+### 準備
 ```
 $ cd [プロジェクトのソースコードを置きたいディレクトリ]
 $ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/startup.sh > startup.sh
 $ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/stop.sh > stop.sh
-$ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/init.sh > init.sh
 ```
-初回起動
+<!-- $ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/init.sh > init.sh -->
+
+<!-- ### 初回起動
 ```
-$ sh startup.sh
-$ sh init.sh
+$ bash startup.sh
+$ bash init.sh
 ```
-以降の起動
+
+### 以降の起動
+-->
+
+### 起動
 ```
-$ sh startup.sh
+$ bash startup.sh
 ```
-停止
+
+### 停止
 ```
-$ sh stop.sh
+$ bash stop.sh
 ```
