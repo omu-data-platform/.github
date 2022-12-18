@@ -7,6 +7,7 @@
 - `curl`
 - `git`
 - `docker`
+- `docker-compose`
 
 ### 準備
 ```
