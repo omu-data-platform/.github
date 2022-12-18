@@ -56,4 +56,6 @@ $ sudo systemctl restart docker
 $ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/startup.sh > startup.sh
 $ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/stop.sh > stop.sh
 $ bash startup.sh
+$ sudo chmod 666 /var/run/docker.sock
+$ docker ps
 ```
