@@ -35,3 +35,25 @@ $ bash startup.sh
 ```
 $ bash stop.sh
 ```
+
+### 手順
+```
+$ sudo apt update
+$ sudo apt -y install curl git docker docker-compose
+$ sudo usermod -aG docker $USER
+$ su - $USER
+$ cd
+$ mkdir omu-data-platform
+$ cd omu-data-platform
+$ cat <<_EOF_ | sudo tee /etc/docker/daemon.json
+{
+  "features": {
+    "buildkit" : true
+  }
+}
+_EOF_
+$ sudo systemctl restart docker
+$ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/startup.sh > startup.sh
+$ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/stop.sh > stop.sh
+$ bash startup.sh
+```
