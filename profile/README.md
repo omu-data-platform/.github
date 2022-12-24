@@ -1,6 +1,6 @@
 # OMU data platform
 個人データやセンシングデータを利活用するためのプラットフォーム。
-![構成図](components.png "components")
+![構成図](profile/components.png "components")
 ## デモ: マシン1台で試してみる
 ### 要件
 以下のコマンドをインストールしていること。
