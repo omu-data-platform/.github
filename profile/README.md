@@ -45,7 +45,7 @@ $ su - $USER
 $ cd
 $ mkdir omu-data-platform
 $ cd omu-data-platform
-$ cat <<_EOF_ | sudo tee /etc/docker/daemon.json
+$ cat <<_EOF_ | sudo tee -a /etc/docker/daemon.json
 {
   "features": {
     "buildkit" : true
@@ -53,6 +53,10 @@ $ cat <<_EOF_ | sudo tee /etc/docker/daemon.json
 }
 _EOF_
 $ sudo systemctl restart docker
+$ cat <<_EOF_ | sudo tee -a /etc/hosts
+127.0.0.1       api.localhost
+127.0.0.1       admin.localhost
+_EOF_
 $ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/startup.sh > startup.sh
 $ curl https://raw.githubusercontent.com/omu-data-platform/bin/main/stop.sh > stop.sh
 $ bash startup.sh
